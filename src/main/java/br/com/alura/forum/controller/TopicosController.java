@@ -1,5 +1,6 @@
 package br.com.alura.forum.controller;
 
+import br.com.alura.forum.dto.TopicoDto;
 import br.com.alura.forum.modelo.Curso;
 import br.com.alura.forum.modelo.Subcategoria;
 import br.com.alura.forum.modelo.Topico;
@@ -19,11 +20,11 @@ import java.util.List;
 public class TopicosController {
 
     @RequestMapping("/topicos")
-    public List<Topico> lista() {
+    public List<TopicoDto> lista() {
         Topico topico = new Topico("Duvida", "Duvida com spring boot",
                 new Curso("spring", new Subcategoria()), new Usuario());
 
-        return Arrays.asList(topico, topico, topico);
+        return TopicoDto.converter(Arrays.asList(topico, topico, topico));
     }
 
 }
