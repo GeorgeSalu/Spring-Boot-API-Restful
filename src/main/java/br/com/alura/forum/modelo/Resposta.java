@@ -1,14 +1,22 @@
 package br.com.alura.forum.modelo;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
 public class Resposta {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private LocalDateTime data = LocalDateTime.now();
 	private String mensagem;
 	private Boolean solucao = false;
+
+	@ManyToOne
 	private Topico topico;
+
+	@ManyToOne
 	private Usuario dono;
 
 	// construtor default exigido pela JPA
