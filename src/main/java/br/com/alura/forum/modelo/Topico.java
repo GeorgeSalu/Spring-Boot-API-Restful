@@ -11,7 +11,7 @@ public class Topico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private LocalDateTime data = LocalDateTime.now();
+	private LocalDateTime dataCriacao = LocalDateTime.now();
 	private String titulo;
 	private String mensagem;
 
@@ -19,7 +19,7 @@ public class Topico {
 	private Curso curso;
 
 	@ManyToOne
-	private Usuario dono;
+	private Usuario autor;
 
 	@OneToMany(mappedBy = "topico")
 	private List<Resposta> respostas = new ArrayList<>();
@@ -30,11 +30,10 @@ public class Topico {
 	protected Topico() {
 	}
 
-	public Topico(String titulo, String mensagem, Curso curso, Usuario dono) {
+	public Topico(String titulo, String mensagem, Curso curso) {
 		this.titulo = titulo;
 		this.mensagem = mensagem;
 		this.curso = curso;
-		this.dono = dono;
 	}
 
 	// getters
@@ -43,7 +42,7 @@ public class Topico {
 	}
 
 	public LocalDateTime getData() {
-		return data;
+		return dataCriacao;
 	}
 
 	public String getTitulo() {
@@ -58,8 +57,8 @@ public class Topico {
 		return curso;
 	}
 
-	public Usuario getDono() {
-		return dono;
+	public Usuario getAutor() {
+		return autor;
 	}
 
 	public List<Resposta> getRespostas() {
