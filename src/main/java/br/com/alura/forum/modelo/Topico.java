@@ -30,12 +30,6 @@ public class Topico {
 	protected Topico() {
 	}
 
-	public Topico(String titulo, String mensagem, Curso curso) {
-		this.titulo = titulo;
-		this.mensagem = mensagem;
-		this.curso = curso;
-	}
-
 	// getters
 	public Long getId() {
 		return id;

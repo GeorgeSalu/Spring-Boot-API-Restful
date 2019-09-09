@@ -18,10 +18,6 @@ public class Curso {
 	protected Curso() {
 	}
 
-	public Curso(String nome, String categoria) {
-		this.nome = nome;
-		this.categoria = categoria;
-	}
 
 	// getters
 	public Long getId() {
