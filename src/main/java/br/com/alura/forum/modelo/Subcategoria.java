@@ -7,7 +7,7 @@ public class Subcategoria {
 	private Categoria categoria;
 
 	// construtor default exigido pela JPA
-	protected Subcategoria() {
+	public Subcategoria() {
 	}
 
 	public Subcategoria(String nome, Categoria categoria) {

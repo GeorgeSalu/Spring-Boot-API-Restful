@@ -12,7 +12,7 @@ public class Usuario {
 	private List<Perfil> perfis = new ArrayList<>();
 
 	// construtor default exigido pela JPA
-	protected Usuario() {
+	public Usuario() {
 	}
 
 	public Usuario(String nome, String email, String senha, List<Perfil> perfis) {
