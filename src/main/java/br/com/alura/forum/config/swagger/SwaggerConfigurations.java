@@ -30,7 +30,7 @@ public class SwaggerConfigurations {
                 .globalOperationParameters(Arrays.asList(
                         new ParameterBuilder()
                             .name("Authorization")
-                            .description("Header para token JWT")
+                            .description("Header para token JWT(Json Web Token)")
                             .modelRef(new ModelRef("string"))
                             .parameterType("header")
                             .required(false)
