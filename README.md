@@ -1,1 +1,7 @@
 # Spring-Boot-API-Restful
+     Crie aplicações Java com o Spring Boot
+    Configura sua aplicação Spring sem o uso de arquivos XML.
+    Acelere seu desenvolvimento web com ajuda do Spring Devtools
+    Aprenda o estilo arquitetural REST
+    Use o Spring Data e Bean Validation
+
